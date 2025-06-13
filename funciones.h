@@ -18,5 +18,6 @@ void imprimirProductos();
 void realizarVenta(struct Venta ventas[], int *totalVentas);
 void listarVentars(struct Venta ventas[], int totalVentas);
 void buscarVenta(struct Venta ventas[], int totalVentas);
+void mostrarProductos();
 
 

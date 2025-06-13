@@ -30,7 +30,7 @@ void imprimirProductos()
     printf("#\tNombre\t\tPrecio\n");
     for (int i = 0; i < 5; i++)
     {
-        printf("%d\t%s\t\t%.2f\n", i + 1, productosDisponibles[i].nombre, productosDisponibles[i].precio);
+        printf("%d\t%s\t\t$ %.2f\n", i + 1, productosDisponibles[i].nombre, productosDisponibles[i].precio);
     }
 }
 
@@ -48,7 +48,7 @@ void realizarVenta(struct Venta ventas[], int *totalVentas)
     }
     struct Venta nuevaVenta;
     printf("Ingrese el nombre del cliente: ");
-    scanf("%[^\n]", nuevaVenta.cliente);
+    scanf("%s", nuevaVenta.cliente);
     printf("Ingrese el documento de identidad del cliente: ");
     scanf("%s", nuevaVenta.cedula);
 
