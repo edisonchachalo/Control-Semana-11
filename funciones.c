@@ -53,7 +53,7 @@ void realizarVenta(struct Venta ventas[], int *totalVentas)
     scanf("%s", nuevaVenta.cedula);
 
     imprimirProductos();
-    printf("Ingrese el numero de productos a vender (max 5): ");
+    printf("\nIngrese la cantidad de productos a vender (max 5): ");
     nuevaVenta.numProductos = validarNum();
 
     if (nuevaVenta.numProductos > 5)
@@ -65,7 +65,7 @@ void realizarVenta(struct Venta ventas[], int *totalVentas)
     for (int i = 0; i < nuevaVenta.numProductos; i++)
     {
         int idProducto;
-        printf("Ingrese el # del producto %d: ", i + 1);
+        printf("\nIngrese el # del producto %d: ", i + 1);
         scanf("%d", &idProducto);
         if (idProducto < 1 || idProducto > 5)
         {
@@ -74,7 +74,7 @@ void realizarVenta(struct Venta ventas[], int *totalVentas)
             continue;
         }
         nuevaVenta.productos[i] = productosDisponibles[idProducto - 1];
-        nuevaVenta.total += nuevaVenta.productos[idProducto - 1].precio;
+        nuevaVenta.total += productosDisponibles[idProducto - 1].precio;
     }
 
     ventas[*totalVentas] = nuevaVenta;
